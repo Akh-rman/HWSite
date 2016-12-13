@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Загадки</title>
+    <meta charset = "utf-8">
+    <link rel = "stylesheet" type = "text/css" href = "style.css">
+</head> 
+<body>
+    <div id = "wrapper">
+        <header>
+            <nav>
+	            <ul>
+                    <li> <a href = "index.html"> Главная </a> </li> <span>/</span>
+		            <li> <a href = "questions.html"> Загадки </a> </li> <span>/</span>
+		            <li> <a href = "guess.html"> Угадайка </a> </li> <span>/</span>
+		            <li> <a href = "guess-multiplayer.html"> Угадайка мультиплеер</a> </li> 
+	            </ul>
+            </nav>
+        </header>
+        <main>
+	        <h1>Игра в загадки</h1>
+	        <figure> <img src = "images/question.png" alt = "Вопрос"> </figure>
+	        <div class = "main-right">
+		        <article>
+				    <div class = "ques1">
+				        <h3>Загадка 1</h3>
+					    <label for = "q1">Что это такое: синий, большой, с усами и полностью набит зайцами?</label> <br>
+				        <input type="text" id = "q1" placeholder = "Введите ответ"> <br/>
+				        <button type="button" id = "q1" data-answer = "троллейбус" onclick = "Button(this)">Отправить</button> <br/>
+				        <div id = "q1-status">
+                        </div>		
+				    </div>
+				    <div class = "ques">
+				        <h3>Загадка 2</h3>
+				        <label for ="q2">Вспушит она свои бока, Свои четыре уголка, И тебя, как ночь настанет, Все равно к себе притянет.
+				        </label> <br>
+				        <input type = "text" id = "q2" placeholder="Введите ответ"><br/>
+				        <button type="button" id = "q2" data-answer = "подушка" onclick = "Button(this)">Отправить</button> <br/>
+				        <div id = "q2-status">
+				        </div>
+                    </div>	
+				    <div class = "ques">
+				        <h3>Загадка 3</h3> 
+					    <label for = "q3">Не ездок, а со шпорами, Не будильник, а всех будит.</label> <br>
+					    <input type="text" id = "q3" placeholder = "Введите ответ"> <br/>
+				        <button type="button" id = "q3" data-answer = "петух" onclick = "Button(this)">Отправить</button> <br/>
+				        <div id = "q3-status">
+                        </div>    
+				    </div>
+				    <div class = "ques">
+				        <h3>Загадка 4</h3> 
+					    <label for = "q4">Распускает хвост павлином, Ходит важным господином, По земле ногами - стук, Как зовут его - ...</label> <br>
+					    <input type="text" id = "q4" placeholder = "Введите ответ"> <br/>
+				        <button type="button" id = "q4" data-answer = "индюк" onclick = "Button(this)">Отправить</button> <br/>
+				        <div id = "q4-status">
+                        </div>
+				    </div>
+		    </article>
+	    </div>
+    </main>
+    <footer>
+    Copyright © 2016 <a href = "https://geekbrains.ru/" target = "_blank"> GeekBrains </a>
+    </footer>
+    </div>
+    <script type = "text/javascript" src = "main.js"></script>
+</body>
+</html>
