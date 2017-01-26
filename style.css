@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 *{
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
 	padding 0;
 	margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -166,7 +166,7 @@ footer {
     left: 0;
     padding: 20px 0;
     text-align: center;
-    background-color: #434445;
+    background-color: #82878b;
     width: 100%;
     color: #a4a4a4;
     font-size: 20px;
