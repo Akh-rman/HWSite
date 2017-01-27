@@ -1,0 +1,192 @@
+*{
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+	padding 0;
+	margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f7f7f7;
+    font-size: 24px;
+}
+
+header {
+    background: #dfdfdf;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom: 1px solid #b5b7ba;
+}
+
+header nav ul li {
+	display: inline-block;
+	margin: 0 15px;
+}
+
+header nav ul li a {
+	color: #4d4d4d;
+	text-decoration: none;
+	
+}
+
+header nav li a:visited {
+    color: #800080;
+}
+
+header nav li a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+ 
+main {
+    padding: 30px 0;
+}
+main h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #2e353d;
+}
+ 
+main figure {
+    float: left;
+    width: 40%;
+    padding: 0 30px;
+    box-sizing: border-box;
+ }
+
+main figure img {
+    max-width: 100%;
+}
+
+main .main-right {
+    float: left;
+    padding: 0 30px 120px 0;
+    width: 60%;
+    box-sizing: border-box;
+    
+}
+
+main article a:visited {
+    color: #800080;
+}
+
+main article a:hover {
+    color: blue;  
+    text-decoration: underline;
+}
+
+main:after {
+    display: block;
+    content:  '';
+    clear: both;
+}
+
+main article {
+    background: white;
+    padding: 30px;
+}
+
+main article p {
+    margin-bottom: 31px;
+}
+
+main article nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+main article nav ul li a:visited {
+    color: #800080;
+}
+
+main article nav ul li a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+main article a {
+    color: black;
+    text-decoration: none;
+}
+
+main article button {
+    margin-top: 15px;
+}
+
+main article .quess button {
+    background: #4d5d72;
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+main article .ques {
+    margin-top: 10px; 
+}
+
+main article .ques button {
+    background: #4d5d72;
+    height: 50px;
+    width: 175px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+} 
+
+main article .ques1 button {
+    background: #4d5d72;
+    height: 50px;
+    width: 175px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+} 
+ 
+main article div input {
+    margin-top: 10px;
+    font-size: 24px;
+    height: 35px;
+    width: 180px;
+}
+
+main article .ques1 #q1-status {
+    margin-top: 10px;
+} 
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #82878b;
+    width: 100%;
+    color: #a4a4a4;
+    font-size: 20px;
+}
+
+footer a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+footer a:visited {
+    color: #800080;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: blue; 
+} 
+
+#wrapper {
+    position: relative;
+    min-height: 100%;
+}
