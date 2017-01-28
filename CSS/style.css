@@ -15,10 +15,14 @@ body {
 }
 /*** Header ***/
 #header-nav {
-    background-color: #b9a5a5;
+    background-color: #d1d1d1;
     text-align: center;
     border: 0;
     border-radius: 0;
+}
+
+.navbar-header button.navbar-toggle {
+    border: 1px solid white;
 }
 
 .navbar .navbar-nav {
@@ -127,11 +131,11 @@ footer {
     text-align: center;
     background-color: #82878b;
     width: 100%;
-    color: #a4a4a4;
+    color: #dddbdb;
 }
 
 footer a {
-    color: #f8f7f7;
+    color: #fffefe;
     text-decoration: none;
 }
 
@@ -151,7 +155,7 @@ footer a:hover {
     .navbar .navbar-nav {
     display: block;
     }
-    .navbar .navbar-nav li a:visited, .navbar .navbar-nav li a:hover {
+    .navbar .navbar-nav li a:visited, .navbar .navbar-nav li a:hover, navbar .navbar-nav li a:focus {
         text-decoration: none;
     }
 }
