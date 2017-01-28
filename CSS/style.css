@@ -1,90 +1,72 @@
 *{
     @import url('https://fonts.googleapis.com/css?family=Roboto');
-	padding 0;
-	margin: 0;
-    font-family: 'Roboto', sans-serif;
-}
-
-html, body {
-    height: 100%;
 }
 
 body {
-    background-color: #f7f7f7;
-    font-size: 24px;
-}
-
-header {
-    background: #dfdfdf;
-    padding: 20px;
-    text-align: center;
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    border-bottom: 1px solid #b5b7ba;
+}
+/*** Header ***/
+
+
+#header-nav {
+    background-color: #b9a5a5;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
 }
 
-header nav ul li {
-	display: inline-block;
-	margin: 0 15px;
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    margin-top: 6px;
 }
 
-header nav ul li a {
-	color: #4d4d4d;
+.navbar .navbar-nav li a {
+    color: #4d4d4d;
 	text-decoration: none;
-	
 }
 
-header nav li a:visited {
+.navbar .navbar-nav li a:visited {
     color: #800080;
 }
 
-header nav li a:hover {
+.navbar .navbar-nav li a:hover {
     color: blue;
     text-decoration: underline;
 }
- 
-main {
-    padding: 30px 0;
-}
-main h1 {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
+/**** End Header ****/
+#main-content h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #2e353d;
 }
  
-main figure {
-    float: left;
-    width: 40%;
-    padding: 0 30px;
-    box-sizing: border-box;
+#main-content div {
+    margin-top: 10px;
+    margin-bottom: 10px;
  }
 
-main figure img {
-    max-width: 100%;
-}
-
-main .main-right {
-    float: left;
-    padding: 0 30px 120px 0;
-    width: 60%;
-    box-sizing: border-box;
-    
-}
-
-main article a:visited {
+#main-content a:visited {
     color: #800080;
 }
 
-main article a:hover {
+#main-content a:hover {
     color: blue;  
     text-decoration: underline;
 }
+
+#main-content img {
+    display: block;
+}
+
 
 main:after {
     display: block;
     content:  '';
     clear: both;
 }
+
 
 main article {
     background: white;
@@ -95,23 +77,9 @@ main article p {
     margin-bottom: 31px;
 }
 
-main article nav ul li {
+#main-content nav ul li {
     display: inline-block;
     margin-right: 10px;
-}
-
-main article nav ul li a:visited {
-    color: #800080;
-}
-
-main article nav ul li a:hover {
-    color: blue;
-    text-decoration: underline;
-}
-
-main article a {
-    color: black;
-    text-decoration: none;
 }
 
 main article button {
@@ -159,11 +127,8 @@ main article div input {
 main article .ques1 #q1-status {
     margin-top: 10px;
 } 
-
+/**** Footer ****/
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 20px 0;
     text-align: center;
     background-color: #82878b;
@@ -173,7 +138,7 @@ footer {
 }
 
 footer a {
-    color: whitesmoke;
+    color: #f8f7f7;
     text-decoration: none;
 }
 
@@ -184,9 +149,11 @@ footer a:visited {
 footer a:hover {
     text-decoration: underline;
     color: blue; 
-} 
+}
+/**** End Footer ****/
 
-#wrapper {
-    position: relative;
-    min-height: 100%;
+/*** Extra small device ***/
+@media (max-width: 767px) {
+   
+    } 
 }
