@@ -34,6 +34,8 @@ body {
 .navbar .navbar-nav li a {
     color: #4d4d4d;
 	text-decoration: none;
+    height: 50px;
+    vertical-align: middle;
 }
 
 .navbar .navbar-nav li a:visited {
@@ -43,6 +45,10 @@ body {
 .navbar .navbar-nav li a:hover {
     color: blue;
     text-decoration: underline;
+}
+
+.navbar .navbar-nav hr {
+    margin: 0;
 }
 /**** End Header ****/
 #main-content h1 {
@@ -156,14 +162,24 @@ footer a:hover {
 @media (max-width: 767px) {
     /*Костыль для navbar-nav. inline-block использовалось чтобы выровнить ссылки при больших размерах экрана. block используется, чтобы вернуть нормальный вид для xs размера в выпадающем меню  */
     .navbar .navbar-nav {
-    display: block;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 0;
     }
-    .navbar .navbar-nav li a:visited, .navbar .navbar-nav li a:hover, navbar .navbar-nav li a:focus {
+    .navbar .navbar-nav li a {
+        line-height: 30px;
+    }
+    .navbar .navbar-nav li a:visited, .navbar .navbar-nav li a:hover {
+        color: #4d4d4d;
         text-decoration: none;
     }
     #main-content > div:nth-child(3) {
         margin-bottom: 60px;
     }
     #main-content > div {
-    margin-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .active-xs { /*Класс для выделения текущего сайта при размере xs*/
+        background-color:#e8e8e8;
+    }
 }
