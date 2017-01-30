@@ -158,6 +158,13 @@ footer a:hover {
 }
 /**** End Footer ****/
 
+/**** Large device ****/
+@media (min-width: 1200px) {
+    #main-content .ques {
+        text-align: center;
+    }
+}
+
 /*** Extra small device ***/
 @media (max-width: 767px) {
     /*Костыль для navbar-nav. inline-block использовалось чтобы выровнить ссылки при больших размерах экрана. block используется, чтобы вернуть нормальный вид для xs размера в выпадающем меню  */
@@ -169,8 +176,11 @@ footer a:hover {
     .navbar .navbar-nav li a {
         line-height: 30px;
     }
-    .navbar .navbar-nav li a:visited, .navbar .navbar-nav li a:hover {
+    .navbar .navbar-nav li a:visited {
         color: #4d4d4d;
+    }
+    .navbar .navbar-nav li a:hover {
+        color: blue;
         text-decoration: none;
     }
     #main-content > div:nth-child(3) {
@@ -178,6 +188,11 @@ footer a:hover {
     }
     #main-content > div {
         margin-bottom: 10px;
+    }
+    #main-content div ul li{
+        display: block;
+        text-align: center;
+        margin: 5px 0 5px 0;
     }
     .active-xs { /*Класс для выделения текущего сайта при размере xs*/
         background-color:#e8e8e8;
