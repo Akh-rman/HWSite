@@ -86,6 +86,10 @@ body {
     text-align: justify;
 }
 
+#main-content nav ul {
+    padding-left: 0;
+}
+
 #main-content nav ul li {
     display: inline-block;
     margin-right: 10px;
