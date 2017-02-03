@@ -1,5 +1,13 @@
-//Функция для игры "Угадайка мультиплеер"
-function playGuess2() {
+$(function () { //Функция для сворачивания меню когда фокус переходит на другие элементы
+    $(".navbar-toggle").blur(function (event) {
+        var screenWidth = window.innerWidth;
+        if (screenWidth < 768) {
+            $("#bs-example-navbar-collapse-1").collapse('hide');
+        }
+    });
+});
+
+function playGuess2() { //Функция для игры "Угадайка мультиплеер"
     var NumbComp = Math.round(Math.random() * 100);
     var playerNum = 1; //номер игрока, который сейчас ходит
 
@@ -39,8 +47,8 @@ function playGuess2() {
         alert("Вы проиграли :( Компьютер загадал число = " + NumbComp);
     }     
 }
-//Функция для игры "Угадайка"
-function playGuess() {
+
+function playGuess() { //Функция для игры "Угадайка"
     var NumbComp = Math.round(Math.random() * 100);
     for (var i = 0; i < 10; i++) {
 		var NumbUser = prompt("Раунд " + (i+1) +"\nВведите число от 0 до 100. Для выхода введите q");
@@ -71,9 +79,7 @@ function playGuess() {
         alert("Вы проиграли :( Компьютер загадал число = " + NumbComp);
     } 
 }
-
-//Функция для игры "Загадки" 
-function Button(input) {
+function Button(input) { //Функция для игры "Загадки" 
     var answer = input.getAttribute("data-answer"),
         id = input.id,
         status = document.getElementById(id + "-status"),

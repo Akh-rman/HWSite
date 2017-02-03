@@ -17,13 +17,18 @@ body {
 #header-nav {
     background-color: #d1d1d1;
     text-align: center;
-    border: 0;
+    border-bottom: 1px solid white;
     border-radius: 0;
 }
 
 .navbar-header button.navbar-toggle {
     border: 1px solid white;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+
 
 .navbar .navbar-nav {
     display: inline-block;
