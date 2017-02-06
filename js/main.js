@@ -79,6 +79,7 @@ function playGuess() { //Функция для игры "Угадайка"
         alert("Вы проиграли :( Компьютер загадал число = " + NumbComp);
     } 
 }
+
 function Button(input) { //Функция для игры "Загадки" 
     var answer = input.getAttribute("data-answer"),
         id = input.id,
@@ -86,10 +87,10 @@ function Button(input) { //Функция для игры "Загадки"
         value = document.getElementById(id).value;
     
     if (value.toLowerCase() == answer) {
-        status.innerHTML = "Ответ верный! :)";
+        status.innerHTML = "<p class = 'answer_green'>Ответ верный! :)</p>";
     }
     else {
         document.getElementById(id).value = "";
-        status.innerHTML = "Ответ неверный! :("; 
+        status.innerHTML = "<p class = 'answer_red'>Ответ неверный! :(</p>"; 
     }
 }

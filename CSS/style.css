@@ -13,7 +13,7 @@ body {
     background: #efefef;
     margin-bottom: 60px;
 }
-/*** Header ***/
+/**** Header ****/
 #header-nav {
     background-color: #d1d1d1;
     text-align: center;
@@ -28,7 +28,6 @@ body {
 .navbar-default .navbar-toggle .icon-bar {
     background-color: white;
 }
-
 
 .navbar .navbar-nav {
     display: inline-block;
@@ -56,6 +55,7 @@ body {
     margin: 0;
 }
 /**** End Header ****/
+/**** Main content ****/ 
 #main-content h1 {
     font-size: 2em;
     margin: 10px 0 20px 0;
@@ -65,7 +65,7 @@ body {
 #main-content div {
     margin-top: 10px;
     margin-bottom: 10px;
- }
+}
 
 #main-content a:visited {
     color: #800080;
@@ -137,9 +137,19 @@ body {
     border: 2px solid gray;
 }
 
-#main-content .ques > div {
-    margin-top: 10px;
-} 
+#main-content div.ques div {
+    margin-top: 15px;
+}
+
+#main-content div.ques p.answer_green {
+    text-align: center;
+    background-color: green;
+}
+#main-content div.ques p.answer_red {
+    text-align: center;
+    background-color: red;
+}
+/**** End Main content ****/
 /**** Footer ****/
 footer {
     position: absolute;
