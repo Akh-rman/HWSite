@@ -190,6 +190,7 @@ footer a:hover {
     }
     .navbar .navbar-nav li:hover {
         background: #e8e8e8;
+        color: #4d4d4d;
     }
     .navbar .navbar-nav li a:hover {
         text-decoration: none;
