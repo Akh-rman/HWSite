@@ -130,13 +130,17 @@ body {
 
 #main-content p.q-status {
     text-align: center;
-    margin-top: 11px;
     font-size: 1.2em;
     color: white;
 }
+@keyframes background_red {
+    50% {background: #b22f18; box-shadow: 0 0 10px 4px #b22f18;}
+}
+@keyframes background_green {
+    50% {background: #d9ce41; box-shadow: 0 0 10px 4px #d9ce41;}
+}
 /**** End Main content ****/
 /**** Footer ****/
-
 footer {
     position: absolute;
     bottom: 0;

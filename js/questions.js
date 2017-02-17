@@ -20,17 +20,20 @@ function Button(input) { //Функция для игры "Загадки"
         value = document.getElementById(id).value;
     status.style.height = "60px";
     status.style.width = "250px";
-    status.style.margin = "15px auto";
+    status.style.margin = "20px auto";
+    status.style.lineHeight = "60px";
     
     if (value.toLowerCase() == answer) {
         status.innerHTML = "<p class = 'q-status'>Ответ верный! :)</p>";
-        status.style.background = "green";
-        status.style.border = "1px solid green";
+        status.style.background = "#079507";
+        status.style.boxShadow = "0 0 10px 4px #079507";
+        status.style.animation = "background_green 2s linear 1s 1";
     }
     else {
         document.getElementById(id).value = "";
         status.innerHTML = "<p class = 'q-status'>Ответ неверный! :(</p>";
-        status.style.background = "red";
-        status.style.border = "1px solid red";
+        status.style.background = "#ff1b1b";
+        status.style.boxShadow = "0 0 10px 4px #ff1b1b";
+        status.style.animation = "background_red 1s linear 1s infinite";
     }
 }
