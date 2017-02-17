@@ -14,16 +14,23 @@ for (var i = 0; i < input.length; i++) {
 }
 
 function Button(input) { //Функция для игры "Загадки" 
-    var answer = input.getAttribute("data-answer"),
-        id = input.id,
-        status = document.getElementById(id + "-status"),
+    var answer = input.getAttribute("data-answer"),  
+        id = input.id, 
+        status = document.getElementById(id + "-status"), 
         value = document.getElementById(id).value;
+    status.style.height = "60px";
+    status.style.width = "250px";
+    status.style.margin = "15px auto";
     
     if (value.toLowerCase() == answer) {
-        status.innerHTML = "<p class = 'answer_green'>Ответ верный! :)</p>";
+        status.innerHTML = "<p class = 'q-status'>Ответ верный! :)</p>";
+        status.style.background = "green";
+        status.style.border = "1px solid green";
     }
     else {
         document.getElementById(id).value = "";
-        status.innerHTML = "<p class = 'answer_red'>Ответ неверный! :(</p>"; 
+        status.innerHTML = "<p class = 'q-status'>Ответ неверный! :(</p>";
+        status.style.background = "red";
+        status.style.border = "1px solid red";
     }
 }

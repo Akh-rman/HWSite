@@ -101,16 +101,14 @@ body {
 }
 
 #main-content button {
-    margin-top: 15px;
-}
-
-#main-content .quess button {
+    margin: 15px auto;
     background: #4d5d72;
     height: 50px;
-    width: 200px;
+    width: 180px;
     font-size: 24px;
     text-align: center;
     color: white;
+    display: block;
 }
 
 #main-content div.ques {
@@ -119,15 +117,6 @@ body {
 
 #main-content p.ques {
     margin-bottom: 15px;
-}
-
-#main-content .ques button {
-    background: #4d5d72;
-    height: 50px;
-    width: 180px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
 }  
  
 #main-content div input {
@@ -135,22 +124,19 @@ body {
     height: 35px;
     width: 200px;
     border: 2px solid gray;
+    display: block;
+    margin: auto;
 }
 
-#main-content div.ques div {
-    margin-top: 15px;
-}
-
-#main-content div.ques p.answer_green {
+#main-content p.q-status {
     text-align: center;
-    background-color: green;
-}
-#main-content div.ques p.answer_red {
-    text-align: center;
-    background-color: red;
+    margin-top: 11px;
+    font-size: 1.2em;
+    color: white;
 }
 /**** End Main content ****/
 /**** Footer ****/
+
 footer {
     position: absolute;
     bottom: 0;
