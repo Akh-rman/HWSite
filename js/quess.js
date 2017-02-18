@@ -1,3 +1,14 @@
+var button = document.getElementById("start");
+button.addEventListener("click", start);
+
+function start() {
+    var input = document.createElement("input");
+    input.placeholder = "Введите число";
+    var div = document.getElementById("quess");
+    div.insertBefore(input, div.children[1]);
+    button.innerHTML = "Отправить";
+}
+
 function playGuess() { //Функция для игры "Угадайка"
     var NumbComp = Math.round(Math.random() * 100);
     for (var i = 0; i < 10; i++) {
