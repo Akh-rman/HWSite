@@ -21,17 +21,17 @@ function Button(input) { //Функция для игры "Загадки"
     status.style.height = "60px";
     status.style.width = "250px";
     status.style.margin = "20px auto";
-    status.style.lineHeight = "60px";
+    status.style.display = "flex";
     
     if (value.toLowerCase() == answer) {
-        status.innerHTML = "<p class = 'q-status'>Ответ верный! :)</p>";
+        status.innerHTML = "<p class = 'text'>Ответ верный! :)</p>";
         status.style.background = "#079507";
         status.style.boxShadow = "0 0 10px 4px #079507";
         status.style.animation = "background_green 2s linear 1s 1";
     }
     else {
         document.getElementById(id).value = "";
-        status.innerHTML = "<p class = 'q-status'>Ответ неверный! :(</p>";
+        status.innerHTML = "<p class = 'text'>Ответ неверный! :(</p>";
         status.style.background = "#ff1b1b";
         status.style.boxShadow = "0 0 10px 4px #ff1b1b";
         status.style.animation = "background_red 1s linear 1s infinite";
