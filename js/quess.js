@@ -8,7 +8,7 @@ var button = document.getElementById("start");
 var Numb = {};
 var i = 0;
 button.addEventListener("click", start);
-console.log(Numb);
+//console.log(Numb);
 
 function start() {
     Numb.NumbComp = Math.round(Math.random() * 100);
@@ -30,20 +30,20 @@ function playGuess() {
     NumbUser = parseInt(NumbUser);
     if (NumbUser > Numb.NumbComp) {
         i++;
-        console.log("Раунд " + i + ". Ваше число больше загаданного");
+        //console.log("Раунд " + i + ". Ваше число больше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число больше загаданного";
         changeDiv("red");
     }
 				
     else if (NumbUser < Numb.NumbComp) {
         i++;
-        console.log("Раунд " + i + ". Ваше число меньше загаданного");
+        //console.log("Раунд " + i + ". Ваше число меньше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число меньше загаданного";
         changeDiv("red");
     }
 				
     else if (NumbUser == Numb.NumbComp) {
-        console.log("Вы угадали число!");
+        //console.log("Вы угадали число!");
         text.innerHTML = "Вы угадали число!";
         changeDiv("green");
         button.removeEventListener("click", playGuess);
@@ -51,12 +51,14 @@ function playGuess() {
     }    
     else {
         i++;
-        console.log("Раунд " + i + ". Ошибка");
+        //console.log("Раунд " + i + ". Ошибка");
         changeDiv("red");
         text.innerHTML = "Раунд " + i + ". Ошибка";
     }                
     if (i == 10) {
-        console.log("Вы проиграли :( Компьютер загадал число " + Numb.NumbComp); 
+        answer.style.height = "100px";
+        //console.log("Вы проиграли :( Компьютер загадал число " + Numb.NumbComp);
+        text.innerHTML = "Вы проиграли :( Компьютер загадал число " + Numb.NumbComp;
         button.removeEventListener("click", playGuess);
         input.removeEventListener("keydown", keyDown);
     } 
