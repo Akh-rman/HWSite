@@ -128,10 +128,13 @@ body {
     margin: auto;
 }
 
-#main-content p.q-status {
+#main-content p.text {
     text-align: center;
     font-size: 1.2em;
     color: white;
+    margin: auto;
+    display: table;
+    vertical-align: middle;
 }
 @keyframes background_red {
     50% {background: #b22f18; box-shadow: 0 0 10px 4px #b22f18;}
