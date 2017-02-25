@@ -1,4 +1,5 @@
-var answer = document.getElementById("answer");
+var p = document.getElementsByClassName("text");
+var text = p[0];
 var input = document.createElement("input");
 input.placeholder = "Введите число";
 input.id = "input";
@@ -14,37 +15,49 @@ function start() {
     div.insertBefore(input, div.children[1]);
     button.innerHTML = "Отправить";
     button.addEventListener("click", playGuess);
+    input.addEventListener("keydown", keyDown);
     button.removeEventListener("click", start);
 }
 
-function playGuess() {
+function keyDown (event) {
+    if (event.keyCode == 13) {
+        playGuess(); 
+    }
+}
+
+function playGuess() { 
     var NumbUser = document.getElementById("input").value;
     NumbUser = parseInt(NumbUser);
     if (NumbUser > Numb.NumbComp) {
         i++;
-        var text = "Раунд "+(i)+". Ваше число больше загаданного";
-        console.log("Раунд "+i+". Ваше число больше загаданного");
-        answer.innerHTML = text;
+        console.log("Раунд " + i + ". Ваше число больше загаданного");
+        text.innerHTML = "Раунд " + i + ". Ваше число больше загаданного";
+        changeDiv("red");
     }
 				
     else if (NumbUser < Numb.NumbComp) {
         i++;
-        console.log("Раунд "+i+". Ваше число меньше загаданного");
-        answer.innerHTML = "Раунд +(i+1)+. Ваше число меньше загаданного";
+        console.log("Раунд " + i + ". Ваше число меньше загаданного");
+        text.innerHTML = "Раунд " + i + ". Ваше число меньше загаданного";
+        changeDiv("red");
     }
 				
     else if (NumbUser == Numb.NumbComp) {
         console.log("Вы угадали число!");
-        answer.innerHTML = "<p>Вы угадали число!</p>";
+        text.innerHTML = "Вы угадали число!";
+        changeDiv("green");
         button.removeEventListener("click", playGuess);
+        input.removeEventListener("keydown", keyDown);
     }    
     else {
         i++;
-        console.log("Раунд "+i+". Ошибка")
-        answer.innerHTML = "<p>Раунд +(i+1)+. Ошибка</p>";
+        console.log("Раунд " + i + ". Ошибка");
+        changeDiv("red");
+        text.innerHTML = "Раунд " + i + ". Ошибка";
     }                
     if (i == 10) {
-        console.log("Вы проиграли :( Компьютер загадал число = " + Numb.NumbComp);
+        console.log("Вы проиграли :( Компьютер загадал число " + Numb.NumbComp); 
         button.removeEventListener("click", playGuess);
+        input.removeEventListener("keydown", keyDown);
     } 
 }
