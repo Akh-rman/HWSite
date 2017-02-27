@@ -7,6 +7,31 @@ $(function () { //Функция для сворачивания меню ког
     });
 });
 
+var main_content = document.getElementById("main-content");
+var a = document.createElement("a");
+var span = document.createElement("span");
+addEventListener("scroll", scroll);
+
+function changeButton () {
+    main_content.appendChild(a);
+    a.className = "scroll-button";
+    a.style.display = "block";
+    a.href = "#header-nav";
+    a.appendChild(span);
+    span.className = "glyphicon glyphicon-arrow-up scroll-span";
+}
+
+function scroll () {
+    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrolled > 100) {
+        changeButton();
+    }
+    else {
+        a.style.display = "none";
+    }
+    
+}
+
 function changeDiv(color) { //функция изменения области ответа игры "Угадайка" и "Угадайка-мультиплеер"
     var answer = document.getElementById("answer");
     answer.style.height = "70px";
