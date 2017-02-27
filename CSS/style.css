@@ -142,6 +142,23 @@ body {
 @keyframes background_green {
     50% {background: #d9ce41; box-shadow: 0 0 10px 4px #d9ce41;}
 }
+#main-content a.scroll-button {
+    display: none;
+    height: 10000px;
+    width: 65px;
+    opacity: 0.2;
+    position: fixed;
+    left: 0;
+    bottom: -20px;
+    background: #259ff8;
+}
+#main-content span.scroll-span {
+    position: fixed;
+    left: 15px;
+    top: 10px;
+    font-size: 1.5em;
+    color: white;
+}
 /**** End Main content ****/
 /**** Footer ****/
 footer {
