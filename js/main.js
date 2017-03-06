@@ -12,16 +12,16 @@ var a = document.createElement("a");
 var span = document.createElement("span");
 addEventListener("scroll", scroll);
 
-function changeButton () {
+function changeButton () { //функция изменения кнопки "вверх"
     main_content.appendChild(a);
     a.className = "scroll-button";
     a.style.display = "block";
     a.href = "#header-nav";
     a.appendChild(span);
-    span.className = "glyphicon glyphicon-arrow-up scroll-span";
+    span.className = "glyphicon glyphicon-chevron-up scroll-span";
 }
 
-function scroll () {
+function scroll () { //функция для появления кнопки "вверх" при скролле вниз 
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 100) {
         changeButton();
