@@ -7,13 +7,13 @@ $(function () { //Функция для сворачивания меню ког
     });
 });
 
-var main_content = document.getElementById("main-content");
+var body = document.querySelector("body");
 var a = document.createElement("a");
 var span = document.createElement("span");
 addEventListener("scroll", scroll);
 
 function changeButton () { //функция изменения кнопки "вверх"
-    main_content.appendChild(a);
+    body.appendChild(a);
     a.className = "scroll-button";
     a.style.display = "block";
     a.href = "#header-nav";
@@ -28,8 +28,7 @@ function scroll () { //функция для появления кнопки "в
     }
     else {
         a.style.display = "none";
-    }
-    
+    }   
 }
 
 function changeDiv(color) { //функция изменения области ответа игры "Угадайка" и "Угадайка-мультиплеер"
