@@ -142,7 +142,7 @@ body {
 @keyframes background_green {
     50% {background: #d9ce41; box-shadow: 0 0 10px 4px #d9ce41;}
 }
-#main-content .scroll-button {
+.scroll-button {
     display: none;
     height: 10000px;
     width: 65px;
@@ -152,10 +152,10 @@ body {
     bottom: -20px;
     background: #259ff8;
 }
-#main-content .scroll-button:hover {
+.scroll-button:hover {
     opacity: 0.35;
 }
-#main-content .scroll-span {
+.scroll-span {
     position: fixed;
     left: 15px;
     top: 10px;
