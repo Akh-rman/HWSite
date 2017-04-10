@@ -22,6 +22,7 @@ function Button(input) { //Функция для игры "Загадки"
     status.style.width = "250px";
     status.style.margin = "20px auto";
     status.style.display = "flex";
+    status.style.borderRadius = "15px";
     
     if (value.toLowerCase() == answer) {
         status.innerHTML = "<p class = 'text'>Ответ верный! :)</p>";

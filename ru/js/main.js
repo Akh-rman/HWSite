@@ -37,6 +37,7 @@ function changeDiv(color) { //функция изменения области �
     answer.style.width = "250px";
     answer.style.margin = "20px auto";
     answer.style.display = "flex";
+    answer.style.borderRadius = "15px";
     
     if (color == "red") {
         answer.style.background = "#ff1b1b";
