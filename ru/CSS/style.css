@@ -1,5 +1,5 @@
 * {
-    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    @import url("https://fonts.googleapis.com/css?family=Roboto");
 }
 
 html {
@@ -8,24 +8,33 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background: #efefef;
     margin-bottom: 60px;
+    background: #efefef;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+a:hover {
+    color: blue;
+    text-decoration: underline;
 }
 /**** Header ****/
 #header-nav {
-    background-color: #d1d1d1;
-    text-align: center;
     border-bottom: 1px solid white;
     border-radius: 0;
+    background-color: #d1d1d1;
+    text-align: center;
 }
 
 .navbar-header button.navbar-toggle {
+    width: 45px;
+    height: 45px;
     border: 1px solid white;
+    border-radius: 25px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
+    margin-right: auto;
+    margin-left: auto;
     background-color: white;
 }
 
@@ -36,10 +45,10 @@ body {
 }
 
 .navbar .navbar-nav li a {
-    color: #4d4d4d;
-    text-decoration: none;
     height: 50px;
+    color: #4d4d4d;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 .navbar .navbar-nav li a:visited {
@@ -57,9 +66,9 @@ body {
 /**** End Header ****/
 /**** Main content ****/
 #main-content h1 {
-    font-size: 2em;
     margin: 10px 0 20px 0;
     color: #2e353d;
+    font-size: 2em;
 }
 
 #main-content div {
@@ -71,18 +80,13 @@ body {
     color: #800080;
 }
 
-#main-content a:hover {
-    color: blue;
-    text-decoration: underline;
-}
-
 #main-content>div {
     margin-bottom: 60px;
 }
 
 #main-content>div:nth-child(3) {
-    background: white;
     padding: 15px;
+    background: white;
 }
 
 #main-content p {
@@ -100,14 +104,15 @@ body {
 }
 
 #main-content button {
-    margin: 15px auto;
-    background: #4d5d72;
-    height: 50px;
-    width: 180px;
-    font-size: 24px;
-    text-align: center;
-    color: white;
     display: block;
+    margin: 15px auto;
+    width: 180px;
+    height: 50px;
+    border-radius: 15px;
+    background: #4d5d72;
+    color: white;
+    text-align: center;
+    font-size: 24px;
 }
 
 #main-content div.ques {
@@ -119,21 +124,21 @@ body {
 }
 
 #main-content div input {
-    font-size: 1.2em;
-    height: 35px;
-    width: 200px;
-    border: 2px solid gray;
     display: block;
     margin: auto;
+    width: 200px;
+    height: 35px;
+    border: 2px solid gray;
+    font-size: 1.2em;
 }
 
 #main-content p.text {
+    display: table;
+    margin: auto;
+    color: white;
+    vertical-align: middle;
     text-align: center;
     font-size: 1.2em;
-    color: white;
-    margin: auto;
-    display: table;
-    vertical-align: middle;
 }
 
 @keyframes background_red {
@@ -151,14 +156,14 @@ body {
 }
 
 .scroll-button {
-    display: none;
-    height: 10000px;
-    width: 65px;
-    opacity: 0.1;
     position: fixed;
-    left: 0;
     bottom: -20px;
+    left: 0;
+    display: none;
+    width: 65px;
+    height: 10000px;
     background: #259ff8;
+    opacity: 0.1;
 }
 
 .scroll-button:hover {
@@ -167,10 +172,10 @@ body {
 
 .scroll-span {
     position: fixed;
-    left: 15px;
     top: 10px;
-    font-size: 1.5em;
+    left: 15px;
     color: white;
+    font-size: 1.5em;
 }
 /**** End Main content ****/
 /**** Footer ****/
@@ -179,10 +184,10 @@ footer {
     bottom: 0;
     left: 0;
     padding: 20px 0;
-    text-align: center;
-    background-color: #82878b;
     width: 100%;
+    background-color: #82878b;
     color: #dddbdb;
+    text-align: center;
 }
 
 footer a {
@@ -193,15 +198,10 @@ footer a {
 footer a:visited {
     color: #800080;
 }
-
-footer a:hover {
-    text-decoration: underline;
-    color: blue;
-}
 /**** End Footer ****/
 /*** Extra small device ***/
 @media (max-width: 767px) {
-    /*Костыль для navbar-nav. inline-block использовалось чтобы выровнить ссылки при больших размерах экрана. block используется, чтобы вернуть нормальный вид для xs размера в выпадающем меню  */
+    /* display:inline-block используется, чтобы выровнить ссылки при больших размерах экрана. display:block используется, чтобы вернуть нормальный вид для xs размера в выпадающем меню */
     .navbar .navbar-nav {
         display: block;
         margin-top: 0;
@@ -228,8 +228,8 @@ footer a:hover {
     }
     #main-content div ul li {
         display: block;
-        text-align: center;
         margin: 5px 0 5px 0;
+        text-align: center;
     }
     .active-xs {
         /*Класс для выделения текущего сайта при размере xs*/
