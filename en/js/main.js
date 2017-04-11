@@ -1,5 +1,5 @@
 $(function() { //Функция для сворачивания меню когда фокус переходит на другие элементы
-    $(".navbar-toggle").blur(function (event) {
+    $(".navbar-toggle").blur(function(event) {
         var screenWidth = window.innerWidth;
         if (screenWidth < 768) {
             $("#bs-example-navbar-collapse-1").collapse('hide');
@@ -12,7 +12,7 @@ var a = document.createElement("a");
 var span = document.createElement("span");
 addEventListener("scroll", scroll);
 
-function changeButton() { //функция изменения кнопки "вверх"
+function changeButton() { //Function of changing the button "up"
     body.appendChild(a);
     a.className = "scroll-button";
     a.style.display = "block";
@@ -21,7 +21,7 @@ function changeButton() { //функция изменения кнопки "вв
     span.className = "glyphicon glyphicon-chevron-up scroll-span";
 }
 
-function scroll() { //функция для появления кнопки "вверх" при скролле вниз 
+function scroll() { //Function for the appearance of the up button when scrolling down 
     var scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 100) {
         changeButton();
@@ -31,12 +31,13 @@ function scroll() { //функция для появления кнопки "в�
     }   
 }
 
-function changeDiv(color) { //функция изменения области ответа игры "Угадайка" и "Угадайка-мультиплеер"
+function changeDiv(color) { //Function of changing the answer area of the game "Guessing" and "Guessing multiplayer"
     var answer = document.getElementById("answer");
     answer.style.height = "70px";
     answer.style.width = "250px";
     answer.style.margin = "20px auto";
     answer.style.display = "flex";
+    answer.style.borderRadius = "15px";
     
     if (color == "red") {
         answer.style.background = "#ff1b1b";
