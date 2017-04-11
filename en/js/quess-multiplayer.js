@@ -20,7 +20,7 @@ function start() {
     Numb.NumbComp = Math.round(Math.random() * 100);
     div.insertBefore(label, div.children[1]);
     div.insertBefore(input, div.children[2]);
-    button.innerHTML = "Отправить";
+    button.innerHTML = "Send";
     button.addEventListener("click", playGuess2);
     input.addEventListener("keydown", keyDown);
     button.removeEventListener("click", start);
