@@ -25,7 +25,7 @@ function keyDown(event) {
     }
 }
 
-function playGuess() { 
+function playGuess() { // Функция для игры Угадайка
     var NumbUser = document.getElementById("input").value;
     NumbUser = parseInt(NumbUser);
     if (NumbUser > Numb.NumbComp) {
