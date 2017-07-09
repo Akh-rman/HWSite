@@ -7,6 +7,7 @@ var div = document.getElementById("quess");
 var button = document.getElementById("start");
 var Numb = {};
 var i = 0;
+var answer = document.getElementById("answer");
 button.addEventListener("click", start);
 //console.log(Numb);
 
@@ -32,27 +33,27 @@ function playGuess() { // Функция для игры Угадайка
         i++;
         //console.log("Раунд " + i + ". Ваше число больше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число больше загаданного";
-        changeDiv("red");
+        changeDiv("red", answer);
     }
 				
     else if (NumbUser < Numb.NumbComp) {
         i++;
         //console.log("Раунд " + i + ". Ваше число меньше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число меньше загаданного";
-        changeDiv("red");
+        changeDiv("red", answer);
     }
 				
     else if (NumbUser == Numb.NumbComp) {
         //console.log("Вы угадали число!");
         text.innerHTML = "Вы угадали число!";
-        changeDiv("green");
+        changeDiv("green", answer);
         button.removeEventListener("click", playGuess);
         input.removeEventListener("keydown", keyDown);
     }    
     else {
         i++;
         //console.log("Раунд " + i + ". Ошибка");
-        changeDiv("red");
+        changeDiv("red", answer);
         text.innerHTML = "Раунд " + i + ". Ошибка";
     }                
     if (i == 10) {

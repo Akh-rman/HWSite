@@ -31,22 +31,21 @@ function scroll() { //функция для появления кнопки "в�
     }   
 }
 
-function changeDiv(color) { //функция изменения области ответа игры "Угадайка" и "Угадайка-мультиплеер"
-    var answer = document.getElementById("answer");
-    answer.style.height = "70px";
-    answer.style.width = "250px";
-    answer.style.margin = "20px auto";
-    answer.style.display = "flex";
-    answer.style.borderRadius = "15px";
+function changeDiv(color, id) { //функция изменения области ответа игры "Угадайка" и "Угадайка-мультиплеер"
+    id.style.height = "70px";
+    id.style.width = "250px";
+    id.style.margin = "20px auto";
+    id.style.display = "flex";
+    id.style.borderRadius = "15px";
     
     if (color == "red") {
-        answer.style.background = "#ff1b1b";
-        answer.style.boxShadow = "0 0 10px 4px #ff1b1b";
-        answer.style.animation = "background_red 1s linear 1s infinite";
+        id.style.background = "#ff1b1b";
+        id.style.boxShadow = "0 0 10px 4px #ff1b1b";
+        id.style.animation = "background_red 1s linear 1s infinite";
     }
     else if (color == "green") {
-        answer.style.background = "#079507";
-        answer.style.boxShadow = "0 0 10px 4px #079507";
-        answer.style.animation = "background_green 2s linear 1s 1";
+        id.style.background = "#079507";
+        id.style.boxShadow = "0 0 10px 4px #079507";
+        id.style.animation = "background_green 2s linear 1s 1";
     }
 }
