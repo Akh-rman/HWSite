@@ -16,22 +16,6 @@ var i = 0;
 button.addEventListener("click", start);
 //console.log(Numb);
 
-function start() {
-    Numb.NumbComp = Math.round(Math.random() * 100);
-    div.insertBefore(label, div.children[1]);
-    div.insertBefore(input, div.children[2]);
-    button.innerHTML = "Отправить";
-    button.addEventListener("click", playGuess2);
-    input.addEventListener("keydown", keyDown);
-    button.removeEventListener("click", start);
-}
-
-function keyDown(event) {
-    if (event.keyCode == 13) {
-        playGuess2(); 
-    }
-}
-
 function check() {
     if (playerNum == 1) {
         playerNum = 2;
@@ -52,7 +36,7 @@ function playGuess2() { //Функция для игры "Угадайка му�
         i++;
         //console.log("Раунд " + i + ". Ваше число больше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число больше загаданного";
-        changeDiv("red");
+        changeDiv("red", answer);
         check();
     }
 				
@@ -60,21 +44,21 @@ function playGuess2() { //Функция для игры "Угадайка му�
         i++;
         //console.log("Раунд " + i + ". Ваше число меньше загаданного");
         text.innerHTML = "Раунд " + i + ". Ваше число меньше загаданного";
-        changeDiv("red");
+        changeDiv("red", answer);
         check();
     }
 				
     else if (NumbUser == Numb.NumbComp) {
         //console.log("Вы угадали число!");
         text.innerHTML = "Вы угадали число!";
-        changeDiv("green");
+        changeDiv("green", answer);
         button.removeEventListener("click", playGuess2);
         input.removeEventListener("keydown", keyDown);
     }    
     else {
         i++;
         //console.log("Раунд " + i + ". Ошибка");
-        changeDiv("red");
+        changeDiv("red", answer);
         check();
         text.innerHTML = "Раунд " + i + ". Ошибка";
     } 
